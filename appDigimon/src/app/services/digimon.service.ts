@@ -8,6 +8,10 @@ export class DigimonService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getDigimon(card: string) {
+    return this.httpClient.get('https://digimoncard.io/api-public/search.php?card=' + card + '&series=Digimon Card Game');
+  }
+
   getRandomDigimon() {
     return this.httpClient.get('https://digimoncard.io/api-public/search.php?n=Agumon&desc=Reveal 5 cards&color=red&type=digimon&attribute=Vaccine&card=BT1-010&pack=BT01-03: Release Special Booster Ver.1.0&sort=name&sortdirection=desc&series=Digimon Card Game');
   }

@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  place-content: center;
+
+  height: calc(100vh - 55px);
+}
