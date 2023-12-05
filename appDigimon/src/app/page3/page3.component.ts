@@ -17,7 +17,9 @@ export class Page3Component implements OnInit{
   ngOnInit(): void {
       this.digimon.getDigimons()
       .subscribe((data: any) => {
-        this.digimons.push(data);
+        this.digimons.push(data[0]);
+        console.log(data[0])
+        console.log(this.digimons)
       })
   }
 

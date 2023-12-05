@@ -14,12 +14,18 @@ interface DigimonCard {
 })
 export class Page1Component {
 
-  public digimon: any; 
+
+  public digimon: DigimonCard | null = null; 
+
 
   constructor(private digimonService: DigimonService) {
     this.digimonService.getRandomDigimon()
-      .subscribe(data => {
-        console.log(data);
+      .subscribe((data: any) => {
+        this.digimon = {
+          name: data[0].name,
+          image_url: data[0].image_url,
+          rarity: data[0].cardrarity
+        }
       })
   }
 
