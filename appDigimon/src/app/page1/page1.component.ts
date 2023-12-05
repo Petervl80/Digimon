@@ -14,7 +14,7 @@ interface DigimonCard {
 })
 export class Page1Component {
 
-  public digimon: DigimonCard; 
+  public digimon: any; 
 
   constructor(private digimonService: DigimonService) {
     this.digimonService.getRandomDigimon()
