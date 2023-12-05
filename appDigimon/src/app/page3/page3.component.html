@@ -1,7 +1,13 @@
-<div class="digimon-grid">
-    <div class="box" *ngFor="let digimon of digimons">
-        <img src="{{digimon.image_url}}" alt="efef">
-        <p>{{digimon.name}}</p>
+<div class="container">
+    <div *ngIf="selectedDigimon != null">
+        <img src="{{selectedDigimon.image_url}}" alt="Digimon" class="digimon">
     </div>
-    
+
+    <div class="pagination">
+        <div *ngFor="let digimon of digimons | paginate: { itemsPerPage: 10, currentPage: page }">
+            <button class="button" (click)="selectDigimon(digimon.cardnumber)">{{digimon.name}}</button>
+        </div>
+
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
 </div>
