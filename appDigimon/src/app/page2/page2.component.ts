@@ -15,7 +15,9 @@ interface DigimonCard {
 export class Page2Component {
 
   public digimon: DigimonCard | null = null;
-  public won: string | null = null;
+  public won: string = "";
+
+  public ganhou: string = "ganhou"
 
   constructor(private digimonService: DigimonService) {
     let randomIndex = Math.floor(Math.random() * 2542);

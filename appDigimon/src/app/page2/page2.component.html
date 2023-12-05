@@ -1,7 +1,7 @@
 <div class="container">
   <img src="{{ digimon?.image_url }}" />
 
-  <h4>
-    {{ won | uppercase }}
+  <h4 
+  [innerHTML]=" won | uppercase | colorir">
   </h4>
 </div>
