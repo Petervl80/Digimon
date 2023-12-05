@@ -3,4 +3,14 @@
   place-content: center;
 
   height: calc(100vh - 55px);
+
+  p {
+    color: green;
+    font-size: 1.75rem;
+    
+    margin-top: 1rem;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
